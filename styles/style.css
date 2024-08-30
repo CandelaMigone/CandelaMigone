@@ -1,0 +1,686 @@
+/********
+Definimos tipografías y propiedades básicas del documento
+
+********/
+
+@font-face {
+    font-family: "Google Sans";
+    src: url("../assets/fonts/GoogleSans-Regular.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Google Sans";
+    src: url("../assets/fonts/GoogleSans-Bold.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Google Sans";
+    src: url("../assets/fonts/GoogleSans-Medium.ttf") format("ttf");
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Google Sans";
+    src: url("../assets/fonts/GoogleSans-Italic.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Unbounded";
+    src: url("../assets/fonts/Unbounded.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+  }
+
+
+  /* definimos el tamaño de tipografía base y la familia tipográfica por defecto */
+html,
+body {
+  font-size: 10px;
+  font-family: "Google Sans", sans-serif;
+  background-color: #FFFFFF;
+  margin:0;
+
+}
+* {
+    box-sizing: border-box !important;
+    /* Importante: esto hace que el tamaño de todas las cajas contemple el padding */
+  }
+
+
+  /********
+  Paso 1: Definimos la estructura básica
+  
+  ********/
+/* Barra de navegación superior */
+header {
+  
+  
+  }
+
+  /* Únicamente la portada tendrá un alto excepcional, para que ocupe toda la pantalla:
+  calculamos el total del alto de la pantalla menos lo que mide el header */
+section#portada {
+    height: 100vh;
+  }
+  
+
+  /********
+  Paso 2: Trabajamos nuestro header
+  
+  ********/
+
+  
+  header {
+    position: relative;
+    width: 100%;
+  }
+  
+  .navbar {
+  position: absolute;
+  top: 50px; /* para controlar la distancia desde la parte superior */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 20px 30px; /* para agrandar la barra */
+  border-radius: 30px; /*  para un efecto más redondeado */
+  width: 80%; /*  ancho de la barra*/
+
+  }
+  
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* los ítems a la derecha */
+    align-items: center;
+    font-size: 20px; /*tamaño de la fuente del botón */
+
+  }
+  
+  .navbar ul li {
+    margin: 0 10px;
+  }
+  
+  .navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 200;
+    padding: 10px 15px;
+  }
+  
+  .navbar ul li a:hover {
+    color: #743a27;
+    text-decoration:underline;
+    border-radius: 10px;
+    font-weight: 400;
+  }
+  
+  .navbar ul li a.cta {
+    background-color: #ffffff;
+    color: #380904;
+    border: 2px solid #380904; /* borde del bton*/
+    border-radius: 25px; /* bordes del botón */
+    padding: 10px 25px; /* padding del botón */
+    font-size: 18px; /*tamaño de la fuente del botón */
+    font-weight: 200;
+  }
+  
+  .navbar ul li a.cta:hover {
+    background-color: #2d2522;
+    color: #FFFFFF;
+    text-decoration: none;
+    
+  }
+  
+  
+  /********
+    Paso 3: Trabajamos nuestra portada
+    
+    ********/
+    section#portada {
+        background-image: url("../assets/img/portada.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        height: 100vh; /*para q ocupe toda la altura de la ventana */
+        justify-content: center;
+        align-items: center;
+        text-align: center; /* para alinear el texto al centro horizontalmente */
+        padding: 10px 20px; /*n padding opcional para el contenido */
+      }
+      
+      section#portada h1 {
+        color: #3B3838;
+        font-size: 38px;
+        font-family: "Unbounded", sans-serif;
+        margin-top: -100px; /*para q suba más arriba */
+      }
+      
+      section#portada h4 {
+        margin-top: 2rem;
+        color: #3B3838;
+        font-weight: 200;
+        font-size: x-large;
+        line-height: 3rem;
+        margin: 0; /* eliminar el margen derecho */
+      }
+      
+      div.portada-izquierda .portada-boton {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+      
+      div.portada-izquierda .portada-boton input[type="submit"] {
+        margin-top: 2rem;
+        background-color: #380904;
+        font-size: 2rem;
+        padding: 1rem 3rem;
+        border-radius: 30px;
+        font-family: 'Google Sans';
+        color: #e9e9e9;
+        border: none;
+        cursor: pointer;
+        font-weight: 2
+      }
+      div.portada-izquierda .portada-boton input[type="submit"]:hover {
+
+        background-color: #1b0402;
+        box-shadow: 0px 4px 15px rgba(27, 15, 15, 0.15); /* sombra  */
+        transform: scale(1.05); 
+        transition: transform 0.3s ease; 
+
+      }
+
+       /********
+    Paso 4: La sección 1
+    
+    ********/
+    section#que-puede-hacer h2 {
+        padding: 5rem;
+        text-align: center;
+        font-family: 'Unbounded';
+        color: #3B3838;
+        font-size: 30px;
+    }
+
+
+    section#seccion-2 {
+        padding: 14rem;
+        text-align: center;
+        
+    }
+    
+    .features-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 80%; /*ancho de la sección */
+        margin: 0 auto; /*ancho de la sección tmbn */
+
+    }
+
+    .feature {
+        text-align: center;
+        max-width: 30%;
+    }
+    
+    .feature img {
+        width: 180px; /* el tamaño de la imagen */
+        height: auto;
+    }
+    
+    .feature h3 {
+        font-size: 2.4rem;
+        font-weight: bold;
+        color: #333;
+    }
+    
+    .feature p {
+        font-size: 1.6rem;
+        color: #333;
+    }
+/********
+Paso 5: SEPARACIÓN: HILO ROJO
+********/
+section#hilorojo1 img {
+  width: 100%;
+  height: 50%;
+  max-width: 100%; /* hace que la imagen no se desborde del contenedor */
+  display: block; /* evira el espacio blanco abajo de la imagen */
+}
+
+/********
+Paso 6: SECCIÓN CARACTERISTICAS
+********/
+.seccion-caracteristicas {
+  padding: 40px 0;
+}
+
+.contenido {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* alinea los cosos desde la parte superior */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+.texto {
+  flex: 1;
+  padding-right: 90px;
+}
+
+.texto h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #3B3838;
+  font-family: 'Unbounded';
+}
+
+.texto p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.lista-caracteristicas {
+  list-style: none;
+  padding: 0; 
+  margin: 0; 
+}
+
+.lista-caracteristicas li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px; /* espacio entre los ítems */
+
+}
+
+.icono-caracteristica {
+  width: 60px;  
+  height: 60px; 
+  margin-right: 15px;
+  flex-shrink: 0; 
+  background-size: contain; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  overflow: hidden;
+}
+
+.icono-caracteristica img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+}
+
+.info-caracteristica h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #333;
+  margin: 0;
+}
+
+.info-caracteristica p {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+.imagen {
+  flex: 1;
+  text-align: right;
+  margin-top: 140px;
+}
+
+.imagen img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/********
+Paso 7: SECCIÓN personalizacion
+********/
+
+.seccion-personalizacion {
+  background-color: #D33D26; 
+  padding: 40px 20px; /* espaciado interno */
+  border-radius: 52px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 90%;
+  margin: 0 auto; /* para centrar la sección */
+
+}
+
+.contenidoPersonalizacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 90px; /* espaciado entre texto e imagen */
+}
+
+.textoPersonalizacion {
+  flex: 1;
+  color: white;
+  margin-left: 60px;
+  margin-top: -20px;
+}
+
+.textoPersonalizacion h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-family: 'Unbounded';
+}
+
+.textoPersonalizacion p {
+  font-size: 21px;
+  line-height: 1.6;
+  margin-bottom: 80px;
+  font-weight: 200;
+  margin-right: 190px;
+}
+
+.boton-contacto {
+  background-color: #FFF1EA;
+  color: #380904;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  font-family: 'Google Sans';
+  font-weight: 200;
+}
+
+
+.boton-contacto:hover {
+  background-color: #faf4f4;
+  color: #380904;
+  transform: scale(1.05); 
+  transition: transform 0.3s ease; 
+}
+
+.imagenCelu {
+  flex: 1;
+  max-width: 250px; /* tamaño d imagen */
+  display: flex;
+  justify-content: center;
+  margin-right: 90px;
+  margin-left: 90px;
+}
+
+.imagenCelu img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+  
+/********
+Paso 8: SECCIÓN hilorojo2
+********/
+
+
+section#hilorojo2 img {
+  width: 100%;
+  height: 50%;
+  max-width: 100%; /* hace que la imagen no se desborde del contenedor */
+  display: block; /* evira el espacio blanco abajo de la imagen */
+}
+
+/********
+Paso 9: SECCIÓN testimonios
+********/
+
+.contenedor {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+.contenedor h1{
+  font-size: 36px;
+  font-family: 'Unbounded';
+  text-align: center;
+  color: #3B3838;
+}
+.contenedor p {
+  text-align: center;
+  font-size: 18px;
+}
+
+.testimonios {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 40px;
+
+}
+
+.testimonio {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 15px;
+  width: 30%;
+  margin-bottom: 25px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  width: 30%;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.testimonio img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  align-self: center;
+  margin-bottom: 0px; /* espacio abajo de la imagen */
+
+}
+
+.testimonio h3 {
+  font-size: 20px;
+  margin: 15px 0 1px;
+  text-align: center;
+  color: #1b0402;
+}
+
+.testimonio p {
+  font-size: 15px;
+  color: #666;
+  text-align: center;
+}
+
+/* colores de fondo de las cards */
+.testimonio-1 {
+  background-color: #CFD8DD;
+}
+
+.testimonio-2 {
+  background-color: #F5E6DB;
+}
+
+.testimonio-3 {
+  background-color: #FDDADA;
+}
+/* hover */
+.testimonio-1:hover, .testimonio-2:hover, .testimonio-3:hover {
+  box-shadow: 0px 4px 15px rgba(120, 120, 120, 0.15); /* sombra */
+  transform: scale(1.05); 
+  transition: transform 0.3s ease; 
+}
+
+section#seccion-5 {
+  background-image: url("../assets/img/form.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px 20px; 
+  border-radius: 20px; 
+  display: flex;
+  justify-content: left; 
+  align-items: left; 
+  color: #3B3838; 
+  margin: 0 auto;
+  max-width: 90%; 
+  height: auto;
+  min-height: 100%; 
+  margin-top: 8%;
+}
+
+.formulariop {
+  max-width: 400px; 
+  padding: 20px;
+}
+
+.formulariop h2 {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #3B3838; 
+  text-align: left; 
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: left; /* para centrar los elementos del formulario */
+}
+
+.controls {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.boton1-submit {
+  padding: 12px;
+  background-color: #BE2C14; 
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Google Sans';
+  width: 50%; /*lo q ocuopa del form */
+}
+
+.boton1-submit:hover {
+  background-color: #cf5732; 
+  transform: scale(1.05); 
+  transition: transform 0.3s ease; 
+}
+
+/* BOTON FLOTANTE*/
+
+.chat-button {
+  height: 200px;
+  width: 200px;
+  background-image: url("../assets/img/botonFlotante.png");
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000; /* par que este sobre todo*/
+}
+.chat-button:hover {
+  transform: scale(1.05); 
+  transition: transform 0.3s ease; 
+}
+.chat-button.hidden {
+  display: none;
+}
+
+/* FOOTER*/
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 87%;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-top: 5%;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column; /* el <h1> y el <a> estan en una columna */
+  align-items: flex-start; /* alinea el contenido a la izquierda */
+}
+
+.footer-content h1 {
+  color: #5a1c15;
+  font-size: 32px;
+  margin: 0;
+  font-family: 'Unbounded';
+  margin-bottom: 10px; 
+}
+
+.footer-left a {
+  color: #BE2C14;
+  text-decoration: none;
+  font-size: 16px;
+  border: 2px solid #BE2C14;
+  color: #2d2522;
+  padding: 10px 20px;
+  border-radius: 25px;
+  display: inline-block;
+  margin-top: 10px; 
+}
+
+.footer-left a:hover {
+  background-color: #b71b11;
+  color: white;
+}
+.footer-center nav {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-center a {
+  color: #5a1c15;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.footer-center a:hover {
+  color: #BE2C14;
+}
+
+.footer-right img {
+  max-height: 150px;
+}
+
+.footer-bottom {
+  background-color: #BE2C14;
+  color: #ffffff;
+  padding: 30px 120px;
+  padding-right: 200px; /* paa separar del borde derecho */
+  margin-top: 40px;
+  font-size: 14px;
+  width: 100%;
+  text-align: left;
+  
+}
